@@ -60,8 +60,8 @@ As interpretações, conclusões e referências estão contidas no arquivo [Arti
 
 Resultados
 
-| Image Name           | Remission Map                               |
-| :------------------: | :-----------------------------------------: |
+| Image Name           | Dados originais | *Data augmentation* |
+| :------------------: | :-----------------------------------------: | :-----------------------------------------: |
 | GPT | ![GPT original](imagens/gpt.png) | ![GPT smote](imagens/gpt-sm.png) |
 | i7726110_-353570.png | ![GPT original](imagens/gpt.png) |
 
