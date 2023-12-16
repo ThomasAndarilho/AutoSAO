@@ -12,8 +12,8 @@ Este projeto visa automatizar a classificação de textos com treinamento superv
 - [GPT](#gpt)
 - [BERTimbau](#bertimbau)
 - [SBERT](#sbert)
-- [Petrolês](#petroles)
-- [Simulações](#main)
+- [Petrolês](#petrolês)
+- [Simulações](#simulações)
 
 ### TF-IDF
 
