@@ -60,15 +60,14 @@ As interpretações, conclusões e referências estão contidas no arquivo [Arti
 
 Resultados
 
-| Image Name           | Dados originais | *Data augmentation* |
-| :------------------: | :-----------------------------------------: | :-----------------------------------------: |
-| GPT | ![GPT original](imagens/gpt.png) | ![GPT smote](imagens/gpt-sm.png) |
-| i7726110_-353570.png | ![GPT original](imagens/gpt.png) |
+| Técnica de embedding | Dados originais                                    | *Data augmentation*                                |
+| :------------------: | :------------------------------------------------: | :-----------------------------------------:        |
+| GPT                  | ![GPT original](imagens/gpt.png)                   | ![GPT smote](imagens/gpt-sm.png)                   |
+| BERTimbau            | ![BERTimbau original](bertimbau.png)               | ![BERTimbau smote](bertimbau-sm.png)               |
+| Petrolês híbrido 100 | ![Petrolês híbrido 100 original](petrolesh100.png) | ![Petrolês híbrido 100 smote](petrolesh100-sm.png) | 
+| Petrolês O&G 100     | ![Petrolês O&G 100 original](petrolesoeg100.png)   | ![Petrolês O&G 100 smote](petrolesoeg100-sm.png)   | 
+| Petrolês O&G 300     | ![Petrolês O&G 300 original](petrolesoeg300.png)   | ![Petrolês O&G 300 smote](petrolesoeg300-sm.png)   | 
+| SBERT v1             | ![SBERT v1 original](sbertv1.png)                  | ![SBERT v1 smote](sbertv1-sm.png)                  | 
+| SBERT v2             | ![SBERT v2 original](sbertv2.png)                  | ![SBERT v2 smote](sbertv2-sm.png)                  | 
 
-
-
-| Image Name           | Remission Map                               | Ground Truth                                   | Road Map Probabilities                     | Road Map Classes                               |
-| :------------------: | :-----------------------------------------: | :--------------------------------------------: | :----------------------------------------: | :--------------------------------------------: |
-| i7705600_-338380.png | ![Remission Map](data/i7705600_-338380.png) | ![Ground Truth](data/i7705600_-338380_svg.png) | ![Road Map](data/r7705600_-338380_map.png) | ![Road Map](data/r7705600_-338380_map_1_6.png) |
-| i7726110_-353570.png | ![Remission Map](data/i7726110_-353570.png) | ![Ground Truth](data/i7726110_-353570_svg.png) | ![Road Map](data/r7726110_-353570_map.png) | ![Road Map](data/r7726110_-353570_map_1_6.png) |
 
