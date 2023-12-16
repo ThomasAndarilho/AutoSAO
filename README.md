@@ -3,4 +3,4 @@ Projeto piloto de automatização de análise de ordens de manutenção SAP a pa
 
 Adicionar breve introdução e apontar para o [notebook principal](https://github.com/ThomasAndarilho/AutoSAO/blob/main/main.ipynb)
 
-Adicionar metodologia e apontar para [artigo]()
+Adicionar metodologia e apontar para [artigo](https://github.com/ThomasAndarilho/AutoSAO/blob/main/Artigo.pdf)
