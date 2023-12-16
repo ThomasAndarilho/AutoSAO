@@ -57,3 +57,18 @@ Os dados gerados pelo processamento de textos com os scripts supracitados são u
 Os códigos utilizados para essas simulações estão contidos no notebook [main.ipynb](https://github.com/ThomasAndarilho/AutoSAO/blob/main/main.ipynb).
 Para executar com sucesso o código contido nesse notebook, é necessário que ele esteja na mesma pasta que os arquivos .xlsx gerados por cada um dos scripts supracitados.
 As interpretações, conclusões e referências estão contidas no arquivo [Artigo.pdf](https://github.com/ThomasAndarilho/AutoSAO/blob/main/Artigo.pdf)
+
+Resultados
+
+| Image Name           | Remission Map                               |
+| :------------------: | :-----------------------------------------: |
+| i7705600_-338380.png | ![gpt](https://github.com/ThomasAndarilho/AutoSAO/assets/65094666/07e09a08-b1fd-49e0-980b-174e5655e081) |
+| i7726110_-353570.png | ![Remission Map](data/i7726110_-353570.png) |
+
+
+
+| Image Name           | Remission Map                               | Ground Truth                                   | Road Map Probabilities                     | Road Map Classes                               |
+| :------------------: | :-----------------------------------------: | :--------------------------------------------: | :----------------------------------------: | :--------------------------------------------: |
+| i7705600_-338380.png | ![Remission Map](data/i7705600_-338380.png) | ![Ground Truth](data/i7705600_-338380_svg.png) | ![Road Map](data/r7705600_-338380_map.png) | ![Road Map](data/r7705600_-338380_map_1_6.png) |
+| i7726110_-353570.png | ![Remission Map](data/i7726110_-353570.png) | ![Ground Truth](data/i7726110_-353570_svg.png) | ![Road Map](data/r7726110_-353570_map.png) | ![Road Map](data/r7726110_-353570_map_1_6.png) |
+
