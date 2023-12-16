@@ -62,8 +62,8 @@ Resultados
 
 | Image Name           | Remission Map                               |
 | :------------------: | :-----------------------------------------: |
-| i7705600_-338380.png | ![gpt](https://github.com/ThomasAndarilho/AutoSAO/assets/65094666/07e09a08-b1fd-49e0-980b-174e5655e081) |
-| i7726110_-353570.png | ![Remission Map](data/i7726110_-353570.png) |
+| GPT | ![GPT original](imagens/gpt.png) | ![GPT smote](imagens/gpt-sm.png) |
+| i7726110_-353570.png | ![GPT original](imagens/gpt.png) |
 
 
 
