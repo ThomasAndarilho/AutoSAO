@@ -14,6 +14,8 @@ Este projeto visa automatizar a classificação de textos com treinamento superv
 - [SBERT](#sbert)
 - [Petrolês](#petrolês)
 - [Simulações](#simulações)
+- [Curvas_ROC](#curvas_roc)
+- [Métricas](#métricas)
 
 ### TF-IDF
 
@@ -58,7 +60,7 @@ Os códigos utilizados para essas simulações estão contidos no notebook [main
 Para executar com sucesso o código contido nesse notebook, é necessário que ele esteja na mesma pasta que os arquivos .xlsx gerados por cada um dos scripts supracitados.
 As interpretações, conclusões e referências estão contidas no arquivo [Artigo.pdf](https://github.com/ThomasAndarilho/AutoSAO/blob/main/Artigo.pdf)
 
-Resultados
+### Curvas_ROC
 
 | Técnica de embedding | Dados originais                                            | *Data augmentation*                                        |
 | :------------------: | :--------------------------------------------------------: | :--------------------------------------------------------: |
@@ -70,4 +72,65 @@ Resultados
 | SBERT v1             | ![SBERT v1 original](imagens/sbertv1.png)                  | ![SBERT v1 smote](imagens/sbertv1-sm.png)                  | 
 | SBERT v2             | ![SBERT v2 original](imagens/sbertv2.png)                  | ![SBERT v2 smote](imagens/sbertv2-sm.png)                  | 
 
+### Métricas
 
+| Embedding        | A | Model   | TN  | FP | FN | TP | p_1  | r_1  | f1_1 | f1_acc | AUC_ROC |
+| ---------------- | - | ------- | --- | -- | -- | -- | ---- | ---- | ---- | ------ | ------- |
+| TF-IDF           | N | RF      | 349 | 10 | 23 | 17 | 0,63 | 0,42 | 0,51 | 0,92   | 0,809   |
+| TF-IDF           | S | RF      | 331 | 28 | 18 | 22 | 0,44 | 0,55 | 0,49 | 0,88   | 0,799   |
+| GPT              | N | RF      | 353 | 6  | 31 | 9  | 0,6  | 0,23 | 0,33 | 0,91   | 0,789   |
+| GPT              | N | NN      | 355 | 4  | 32 | 8  | 0,67 | 0,2  | 0,31 | 0,91   | 0,772   |
+| GPT              | N | XGBoost | 355 | 9  | 28 | 12 | 0,57 | 0,3  | 0,39 | 0,91   | 0,765   |
+| GPT              | S | RF      | 348 | 11 | 23 | 17 | 0,61 | 0,42 | 0,5  | 0,91   | 0,794   |
+| GPT              | S | NN      | 340 | 19 | 21 | 19 | 0,5  | 0,47 | 0,49 | 0,9    | 0,769   |
+| GPT              | S | XGBoost | 340 | 19 | 21 | 19 | 0,5  | 0,47 | 0,49 | 0,9    | 0,789   |
+| Bertimbau        | N | RF      | 354 | 5  | 33 | 7  | 0,58 | 0,17 | 0,27 | 0,9    | 0,735   |
+| Bertimbau        | N | NN      | 355 | 4  | 33 | 7  | 0,64 | 0,17 | 0,27 | 0,91   | 0,733   |
+| Bertimbau        | N | XGBoost | 354 | 5  | 30 | 10 | 0,67 | 0,25 | 0,36 | 0,91   | 0,743   |
+| Bertimbau        | S | RF      | 348 | 11 | 28 | 12 | 0,52 | 0,3  | 0,38 | 0,9    | 0,741   |
+| Bertimbau        | S | NN      | 272 | 87 | 17 | 23 | 0,21 | 0,57 | 0,31 | 0,74   | 0,717   |
+| Bertimbau        | S | XGBoost | 341 | 18 | 27 | 13 | 0,42 | 0,33 | 0,37 | 0,89   | 0,716   |
+| Petrolês H 100   | N | RF      | 345 | 14 | 23 | 17 | 0,55 | 0,42 | 0,48 | 0,91   | 0,816   |
+| Petrolês H 100   | N | NN      | 352 | 7  | 24 | 16 | 0,7  | 0,4  | 0,51 | 0,92   | 0,823   |
+| Petrolês H 100   | N | XGBoost | 343 | 16 | 23 | 17 | 0,52 | 0,42 | 0,47 | 0,9    | 0,816   |
+| Petrolês H 100   | S | RF      | 322 | 37 | 14 | 26 | 0,41 | 0,65 | 0,5  | 0,87   | 0,79    |
+| Petrolês H 100   | S | NN      | 300 | 59 | 11 | 29 | 0,33 | 0,72 | 0,45 | 0,82   | 0,813   |
+| Petrolês H 100   | S | XGBoost | 325 | 34 | 16 | 24 | 0,41 | 0,6  | 0,49 | 0,87   | 0,779   |
+| Petrolês O&G 100 | N | RF      | 346 | 13 | 25 | 15 | 0,54 | 0,38 | 0,44 | 0,9    | 0,811   |
+| Petrolês O&G 100 | N | NN      | 351 | 8  | 26 | 14 | 0,64 | 0,35 | 0,45 | 0,91   | 0,793   |
+| Petrolês O&G 100 | N | XGBoost | 343 | 16 | 23 | 17 | 0,52 | 0,42 | 0,47 | 0,9    | 0,806   |
+| Petrolês O&G 100 | S | RF      | 332 | 27 | 17 | 23 | 0,46 | 0,57 | 0,51 | 0,89   | 0,817   |
+| Petrolês O&G 100 | S | NN      | 265 | 94 | 9  | 31 | 0,25 | 0,78 | 0,38 | 0,74   | 0,796   |
+| Petrolês O&G 100 | S | XGBoost | 327 | 32 | 17 | 23 | 0,42 | 0,57 | 0,48 | 0,88   | 0,806   |
+| Petrolês O&G 300 | N | RF      | 344 | 15 | 25 | 15 | 0,5  | 0,38 | 0,43 | 0,9    | 0,839   |
+| Petrolês O&G 300 | N | NN      | 352 | 6  | 26 | 14 | 0,7  | 0,35 | 0,47 | 0,92   | 0,815   |
+| Petrolês O&G 300 | N | XGBoost | 342 | 17 | 23 | 17 | 0,5  | 0,42 | 0,46 | 0,9    | 0,805   |
+| Petrolês O&G 300 | S | RF      | 331 | 28 | 15 | 25 | 0,47 | 0,62 | 0,54 | 0,89   | 0,806   |
+| Petrolês O&G 300 | S | NN      | 267 | 92 | 12 | 28 | 0,23 | 0,7  | 0,35 | 0,74   | 0,777   |
+| Petrolês O&G 300 | S | XGBoost | 323 | 36 | 19 | 21 | 0,37 | 0,53 | 0,43 | 0,86   | 0,8     |
+| SBERT v1         | N | RF      | 352 | 7  | 31 | 9  | 0,56 | 0,23 | 0,32 | 0,9    | 0,794   |
+| SBERT v1         | N | NN      | 354 | 5  | 30 | 10 | 0,67 | 0,25 | 0,36 | 0,91   | 0,798   |
+| SBERT v1         | N | XGBoost | 347 | 12 | 27 | 13 | 0,52 | 0,33 | 0,4  | 0,9    | 0,782   |
+| SBERT v1         | S | RF      | 343 | 16 | 24 | 16 | 0,5  | 0,4  | 0,44 | 0,9    | 0,788   |
+| SBERT v1         | S | NN      | 331 | 28 | 20 | 20 | 0,42 | 0,5  | 0,45 | 0,88   | 0,817   |
+| SBERT v1         | S | XGBoost | 340 | 19 | 23 | 17 | 0,47 | 0,42 | 0,45 | 0,89   | 0,805   |
+| SBERT v2         | N | RF      | 353 | 6  | 30 | 10 | 0,62 | 0,25 | 0,36 | 0,91   | 0,77    |
+| SBERT v2         | N | NN      | 354 | 5  | 29 | 11 | 0,69 | 0,28 | 0,39 | 0,91   | 0,822   |
+| SBERT v2         | N | XGBoost | 351 | 8  | 27 | 13 | 0,62 | 0,33 | 0,43 | 0,91   | 0,789   |
+| SBERT v2         | S | RF      | 345 | 14 | 25 | 15 | 0,52 | 0,38 | 0,43 | 0,9    | 0,813   |
+| SBERT v2         | S | NN      | 312 | 47 | 16 | 24 | 0,34 | 0,6  | 0,43 | 0,84   | 0,802   |
+| SBERT v2         | S | XGBoost | 342 | 17 | 22 | 18 | 0,51 | 0,45 | 0,48 | 0,9    | 0,785   |
+
+
+- **Embedding**: Método utilizado para conversão de uma sentença em um vetor numérico.
+- **A**: *Augmentation*. Neste caso, de forma a amenizar o desbalanceamento de classes, foi utilizado SMOTE.
+- **Model**: Modelo utilizado para classificação, sendo Random Forest (RF), Redes neurais (NN) ou XGBoost.
+- **TN**: Verdadeiros negativos.
+- **FP**: Falsos positivo.
+- **FN**: Falsos negativos.
+- **TP**: Verdadeiros positivos.
+- **p_1**: Precisão para a classe 1.
+- **r_1**: Recall para a classe 1.
+- **f1_1**: F1 score para a classe 1.
+- **f1_acc**: F1 score para a acurácia.
+- **AUC_ROC**: Área sob a curva ROC.
