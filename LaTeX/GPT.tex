@@ -137,20 +137,20 @@ $$recall = \frac{TP}{(TP + FN)}$$
 
 
 
-É possível observar que são obtidos os melhores resultados de recall com o uso dos \textit{embeddings} gerados pelo Petrolês O\&G H 100. Outra métrica que permite comparar o desempenho de diferentes modelos é a curva ROC. Os gráficos para esse método utilizando ou não SMOTE estão contidos na Figura~\ref{fig:petrolesh100} e na Figura~\ref{fig:petrolesh100-sm}.
+É possível observar que são obtidos os melhores resultados de recall com o uso dos \textit{embeddings} gerados pelo Petrolês O\&G H 100. Outra métrica que permite comparar o desempenho de diferentes modelos é a curva ROC. Os gráficos para esse método utilizando ou não SMOTE estão contidos na Figura~\ref{fig:petrolesoeg100} e na Figura~\ref{fig:petrolesoeg100-sm}.
 
   \begin{figure}[ht]
   \centering
-  \includegraphics[width=.48\textwidth]{petrolesh100.png}
+  \includegraphics[width=.48\textwidth]{petrolesoeg100.png}
   \caption{Curva ROC de classificadores treinados com dados obtidos dos textos longos através de do petrolês O\&G 100}
-  \label{fig:petrolesh100}
+  \label{fig:petrolesoeg100}
   \end{figure}
 
   \begin{figure}[ht]
   \centering
-  \includegraphics[width=.48\textwidth]{petrolesh100-sm.png}
+  \includegraphics[width=.48\textwidth]{petrolesoeg100-sm.png}
   \caption{Curva ROC de classificadores treinados com dados obtidos dos textos longos através de do petrolês O\&G 100 e com data augmentation usando SMOTE}
-  \label{fig:petrolesh100-sm}
+  \label{fig:petrolesoeg100-sm}
   \end{figure}
 
   Os resultados obtidos mostram que é possível obter desempenho competitivo com técnicas consolidadas, simples e que rodam localmente, eliminando os custos e a dependência de um serviço fornecido através de uma API \cite{neelakantan2022text}.
